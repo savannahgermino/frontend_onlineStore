@@ -1,0 +1,13 @@
+.product{
+    border: 1px solid rgb(216, 216, 219);
+    margin-bottom: 10px;
+    background-color: rgb(186, 195, 194);
+    width: 250px;
+    height: 450px;
+    margin-right: 10px;
+}
+
+.product img{
+    width: 250px;
+    height: 250px;
+}
