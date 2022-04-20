@@ -2,9 +2,10 @@ import "./navBar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="/#">
+          The Front End Bakery
         </a>
         <button
           className="navbar-toggler"
@@ -26,7 +27,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/#">
-                Link
+                Instagram
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -43,12 +44,12 @@ const Navbar = () => {
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <a className="dropdown-item" href="/#">
-                    Action
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
-                    Another action
+                    Locations
                   </a>
                 </li>
                 <li>
@@ -56,13 +57,13 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a className="dropdown-item" href="/#">
-                    Something else here
+                    Wholesale
                   </a>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
+              <a className="nav-link contact">Contact Us</a>
             </li>
           </ul>
           <form className="d-flex">
@@ -73,7 +74,7 @@ const Navbar = () => {
               aria-label="Search"
             ></input>
             <button className="btn btn-outline-success" type="submit">
-              Search
+              Search Products
             </button>
           </form>
         </div>

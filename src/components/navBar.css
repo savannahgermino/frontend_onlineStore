@@ -1,7 +1,17 @@
 .navbar{
-    background-color: rgb(75, 75, 189);
+    background-color: rgb(83, 122, 122);
 }
 
-.navbar h1{
+.navbar{
     color: black;
+}
+.navbar-brand{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.nav-item{
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-style: oblique;
 }

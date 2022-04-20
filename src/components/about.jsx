@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
 import "./about.css";
 
 const About = () => {
     const [name, setName] = React.useState("");
+
+    const handleShowName = () => {
+        setName("Savannah Germino");
+    };
 
     return(
         <div className="about">
@@ -10,7 +14,9 @@ const About = () => {
             <hr></hr>
             <h3>{name}</h3>
 
-            <button className="btn-sm btn-danger">Click me!</button>
+            <button onClick={handleShowName} className="btn btn-sm btn-danger">
+                Click me!
+            </button>
         </div>
     );
 };
