@@ -18,10 +18,10 @@ const Product = (props) => {
 
             <div className="prices">
                 <label className="total">
-                    <span> Total:  </span> ${(props.info.price * quantity).toFixed(2)}
+                    <span><b> Total: </b></span> ${(props.info.price * quantity).toFixed(2)}
                 </label>
                 <label className="price">
-                    <span>  Price:</span>${props.info.price.toFixed(2)}
+                    <span><b> Price: </b></span>${props.info.price.toFixed(2)}
                 </label>
             </div>
 

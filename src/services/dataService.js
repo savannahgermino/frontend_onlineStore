@@ -44,7 +44,7 @@ let mockCatalog = [
     },
     {
         _id: "5f3986449732190",
-        title: "Chocolate Fudge Cupcake",
+        title: "Chocolate Cupcake",
         category:"CupCake",
         price: 3,
         image: "choc-cupcake.jpeg",

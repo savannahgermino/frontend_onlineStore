@@ -1,8 +1,9 @@
 .catalog .product{
     display:inline-block;
+    background-color: rgb(196, 220, 220);
 }
 .catalog{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     padding-top: 15px;
     margin-bottom: 20px;
 }
