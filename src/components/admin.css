@@ -33,3 +33,7 @@
 .my-coupon input{
     width: 230px;
 }
+
+.admin-page .alert{
+    margin: 25px 300px;
+}

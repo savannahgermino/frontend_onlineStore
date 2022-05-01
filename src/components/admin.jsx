@@ -4,6 +4,8 @@ import {useState} from 'react';
 const Admin = () => {
     const [product, setProduct] = useState({});
     const [coupon, setCoupon] = useState({});
+    const [errorVisible, setErrorVisible] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(true);
 
     const handleTextChange = (e) => {
         let copy = {...product };
@@ -19,21 +21,26 @@ const Admin = () => {
         setCoupon(copy);
     };
 
+    const showError = (text) => {
+        setErrorMessage(text);
+        setErrorVisible(true);
+    }
+
     const handleSaveProduct = () => {
         console.log(product);
 
         if (product.title.length < 5){
-            alert("Error, title must be at least 5 characters");
+            showError("Error, title must be at least 5 characters");
             return;
         }
 
         if (!product.image){
-            alert("Error, image field cannot be empty");
+            showError("Error, image field cannot be empty");
             return;
         }
 
         if (!product.category){
-            alert("Error, image field cannot be empty");
+            showError("Error, image field cannot be empty");
             return;
         }
 
@@ -41,7 +48,7 @@ const Admin = () => {
         savedProduct.price = parseFloat(product.price);
 
         if (!savedProduct.price || savedProduct.price < 1){
-            alert("Error, price must be greater than $1");
+            showError("Error, price must be greater than $1");
             return;
         }
 
@@ -54,22 +61,24 @@ const Admin = () => {
         savedCoupon.discount = parseFloat(savedCoupon.discount);
 
         if (savedCoupon.code.length < 5){
-            alert("Error, code must be at least 5 characters");
+            showError("Error, code must be at least 5 characters");
             return;
         }
 
         if (!savedCoupon.discount || savedCoupon.discount > 35){
-            alert("Error, discount cannot be lower than 1% or exceed 35%");
+            showError("Error, discount cannot be lower than 1% or exceed 35%");
             return;
         }
 
+        setErrorVisible(false);
         console.log("Saving Coupon...");
 
     };
-    
 
     return (
         <div className="admin-page">
+            { errorVisible ? <div className="alert alert-danger">{errorMessage}</div> : null }
+
             <div className="sections-container">
                 <section className="sec-products">
                     <h4>Manage Products</h4>
