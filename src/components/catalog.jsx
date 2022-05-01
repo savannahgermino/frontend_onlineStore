@@ -2,7 +2,7 @@ import "./catalog.css";
 import Product from "./product";
 import { useState, useEffect } from "react";
 import DataService from "../services/dataService";
-import { Button } from "bootstrap";
+// import { Button } from "bootstrap";
 
 const Catalog = () => {
     const [products, setProducts] = useState ([]);
