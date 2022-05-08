@@ -15,7 +15,7 @@ const Home = () => {
           <h1>Welcome to the Homepage</h1>
           <h2>Fresh Baked Goods!</h2>
         </div>
-        {/* <img src="/images/wrap2.jpg" alt="fresh food"></img> */}
+        {<img src="./images/bakery.jpeg" alt="bakery"></img>}
       </div>
 
       <div>
