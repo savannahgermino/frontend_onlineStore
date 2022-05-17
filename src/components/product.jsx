@@ -19,22 +19,22 @@ const Product = (props) => {
 
     return (
         <div className="product">
-            <img src={"/images/" + props.info.image} alt="pic" ></img>
+            <img src={"/images/" + props.info.image} alt="Product" ></img>
 
             <h3>{props.info.title}</h3>
 
             <div className="prices">
                 <label className="total">
-                    <span><b> Total: </b></span> ${(props.info.price * quantity).toFixed(2)}
+                    <span><b>Total: </b></span> ${(props.info.price * quantity).toFixed(2)}
                 </label>
                 <label className="price">
-                    <span><b> Price: </b></span>${props.info.price.toFixed(2)}
+                    <span><b>Price: </b></span>${(props.info.price * 1).toFixed(2)}
                 </label>
             </div>
 
             <QuantityPicker onChange={handleQuantityChange}></QuantityPicker>
 
-            <button className="btn btn-sm btn-primary">Add to cart</button>
+            <button className={handleAdd} className="btn btn-sm btn-primary"> Add to cart</button>
         </div>
     );
 };

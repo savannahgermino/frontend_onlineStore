@@ -1,3 +1,4 @@
+import axios from 'axios';
 
 let mockCatalog = [
     {
@@ -52,13 +53,20 @@ let mockCatalog = [
 ];
 
 class DataService {
+    async getCatalog(){
 
-    getCatalog(){
-
-
-        return mockCatalog;
+        let response = await axios.get("http://127.0.0.1:5000/api/catalog");
+        return 
+        
+        // return mockCatalog;
     }
 
+    async getCoupons(){
+        console.log("calling server");
+
+        let response = await axios.get("http://127.0.0.1.5000/api/couponCodes")
+        console.log("retrieved", response.data)
+    }
 }
 
 export default DataService;
